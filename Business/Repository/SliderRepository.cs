@@ -23,7 +23,9 @@ namespace Business.Repository
             {
                 throw new ArgumentNullException("Id");
             }
-            var data = await _context.Sliders.Where(n => n.Id == id && !n.isDeleted).FirstOrDefaultAsync();
+            var data = await _context.Sliders.Where(n => n.Id == id && !n.isDeleted)
+                                             .Include(n=>n.Image)
+                                             .FirstOrDefaultAsync();
             if (data is null)
             {
                 throw new EntityIsNullException();
@@ -33,7 +35,7 @@ namespace Business.Repository
 
         public async Task<List<Slider>> GetAll()
         {
-            var data = await _context.Sliders.Where(n =>!n.isDeleted).ToListAsync();
+            var data = await _context.Sliders.Where(n =>!n.isDeleted).Include(n => n.Image).ToListAsync();
             if (data is null)
             {
                 throw new EntityIsNullException();

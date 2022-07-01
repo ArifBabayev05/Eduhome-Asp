@@ -77,3 +77,10 @@
 /Users/babayev_/Desktop/Eduhome/Eduhome/Eduhome/bin/Debug/netcoreapp3.1/Exceptions.dll
 /Users/babayev_/Desktop/Eduhome/Eduhome/Eduhome/bin/Debug/netcoreapp3.1/Business.pdb
 /Users/babayev_/Desktop/Eduhome/Eduhome/Eduhome/bin/Debug/netcoreapp3.1/Exceptions.pdb
+/Users/babayev_/Desktop/Eduhome/Eduhome/Eduhome/obj/Debug/netcoreapp3.1/Razor/Areas/Admin/Views/Dashboard/Index.cshtml.g.cs
+/Users/babayev_/Desktop/Eduhome/Eduhome/Eduhome/obj/Debug/netcoreapp3.1/Razor/Areas/Admin/Views/Shared/_AdminLayout.cshtml.g.cs
+/Users/babayev_/Desktop/Eduhome/Eduhome/Eduhome/obj/Debug/netcoreapp3.1/Razor/Areas/Admin/Views/_ViewImports.cshtml.g.cs
+/Users/babayev_/Desktop/Eduhome/Eduhome/Eduhome/obj/Debug/netcoreapp3.1/Razor/Areas/Admin/Views/_ViewStart.cshtml.g.cs
+/Users/babayev_/Desktop/Eduhome/Eduhome/Eduhome/bin/Debug/netcoreapp3.1/Utilities.dll
+/Users/babayev_/Desktop/Eduhome/Eduhome/Eduhome/bin/Debug/netcoreapp3.1/Utilities.pdb
+/Users/babayev_/Desktop/Eduhome/Eduhome/Eduhome/obj/Debug/netcoreapp3.1/Razor/Areas/Admin/Views/Slider/Index.cshtml.g.cs

@@ -1533,6 +1533,16 @@
         "runtime": {
           "bin/placeholder/Exceptions.dll": {}
         }
+      },
+      "Utilities/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v3.1",
+        "compile": {
+          "bin/placeholder/Utilities.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Utilities.dll": {}
+        }
       }
     }
   },
@@ -5765,6 +5775,11 @@
       "type": "project",
       "path": "../Exceptions/Exceptions.csproj",
       "msbuildProject": "../Exceptions/Exceptions.csproj"
+    },
+    "Utilities/1.0.0": {
+      "type": "project",
+      "path": "../Utilities/Utilities.csproj",
+      "msbuildProject": "../Utilities/Utilities.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -5773,7 +5788,8 @@
       "DAL >= 1.0.0",
       "Microsoft.EntityFrameworkCore >= 3.1.26",
       "Microsoft.EntityFrameworkCore.SqlServer >= 3.1.26",
-      "Microsoft.EntityFrameworkCore.Tools >= 3.1.26"
+      "Microsoft.EntityFrameworkCore.Tools >= 3.1.26",
+      "Utilities >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -5806,6 +5822,9 @@
             },
             "/Users/babayev_/Desktop/Eduhome/Eduhome/DAL/DAL.csproj": {
               "projectPath": "/Users/babayev_/Desktop/Eduhome/Eduhome/DAL/DAL.csproj"
+            },
+            "/Users/babayev_/Desktop/Eduhome/Eduhome/Utilities/Utilities.csproj": {
+              "projectPath": "/Users/babayev_/Desktop/Eduhome/Eduhome/Utilities/Utilities.csproj"
             }
           }
         }

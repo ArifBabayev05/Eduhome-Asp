@@ -1,10 +1,6 @@
 ﻿<Properties StartupConfiguration="{B2028D3B-B358-482D-AF81-BED6A2AC2B4F}|Default">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.Business FirstBuild="True" />
-  <MonoDevelop.Ide.ItemProperties.Exceptions FirstBuild="True" />
-  <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
-  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints />
   <MultiItemStartupConfigurations />
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.ItemProperties.Eduhome PreferredExecutionTarget="/Applications/Google Chrome.app" />
@@ -49,4 +45,5 @@
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.ItemProperties.Utilities FirstBuild="True" />
 </Properties>

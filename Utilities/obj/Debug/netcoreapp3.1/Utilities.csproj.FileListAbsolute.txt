@@ -1,0 +1,10 @@
+/Users/babayev_/Desktop/Eduhome/Eduhome/Utilities/bin/Debug/netcoreapp3.1/Utilities.deps.json
+/Users/babayev_/Desktop/Eduhome/Eduhome/Utilities/bin/Debug/netcoreapp3.1/Utilities.dll
+/Users/babayev_/Desktop/Eduhome/Eduhome/Utilities/bin/Debug/netcoreapp3.1/Utilities.pdb
+/Users/babayev_/Desktop/Eduhome/Eduhome/Utilities/obj/Debug/netcoreapp3.1/Utilities.csproj.AssemblyReference.cache
+/Users/babayev_/Desktop/Eduhome/Eduhome/Utilities/obj/Debug/netcoreapp3.1/Utilities.GeneratedMSBuildEditorConfig.editorconfig
+/Users/babayev_/Desktop/Eduhome/Eduhome/Utilities/obj/Debug/netcoreapp3.1/Utilities.AssemblyInfoInputs.cache
+/Users/babayev_/Desktop/Eduhome/Eduhome/Utilities/obj/Debug/netcoreapp3.1/Utilities.AssemblyInfo.cs
+/Users/babayev_/Desktop/Eduhome/Eduhome/Utilities/obj/Debug/netcoreapp3.1/Utilities.csproj.CoreCompileInputs.cache
+/Users/babayev_/Desktop/Eduhome/Eduhome/Utilities/obj/Debug/netcoreapp3.1/Utilities.dll
+/Users/babayev_/Desktop/Eduhome/Eduhome/Utilities/obj/Debug/netcoreapp3.1/Utilities.pdb

@@ -25,7 +25,7 @@ namespace Eduhome.Controllers
             HomeVM homeVM = new HomeVM();
 
             homeVM.Sliders = await _sliderService.GetAll();
-            return View();
+            return View(homeVM);
         }
     }
 }
