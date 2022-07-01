@@ -1,0 +1,25 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="ViewModels\" />
+    <None Remove="ViewModels\Home\" />
+    <None Remove="Repository\" />
+    <None Remove="Services\" />
+    <None Remove="Base\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="ViewModels\" />
+    <Folder Include="ViewModels\Home\" />
+    <Folder Include="Repository\" />
+    <Folder Include="Services\" />
+    <Folder Include="Base\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DAL\DAL.csproj" />
+    <ProjectReference Include="..\Exceptions\Exceptions.csproj" />
+  </ItemGroup>
+</Project>

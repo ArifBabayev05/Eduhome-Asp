@@ -1,0 +1,10 @@
+/Users/babayev_/Desktop/Eduhome/Eduhome/Exceptions/bin/Debug/netcoreapp3.1/Exceptions.deps.json
+/Users/babayev_/Desktop/Eduhome/Eduhome/Exceptions/bin/Debug/netcoreapp3.1/Exceptions.dll
+/Users/babayev_/Desktop/Eduhome/Eduhome/Exceptions/bin/Debug/netcoreapp3.1/Exceptions.pdb
+/Users/babayev_/Desktop/Eduhome/Eduhome/Exceptions/obj/Debug/netcoreapp3.1/Exceptions.csproj.AssemblyReference.cache
+/Users/babayev_/Desktop/Eduhome/Eduhome/Exceptions/obj/Debug/netcoreapp3.1/Exceptions.GeneratedMSBuildEditorConfig.editorconfig
+/Users/babayev_/Desktop/Eduhome/Eduhome/Exceptions/obj/Debug/netcoreapp3.1/Exceptions.AssemblyInfoInputs.cache
+/Users/babayev_/Desktop/Eduhome/Eduhome/Exceptions/obj/Debug/netcoreapp3.1/Exceptions.AssemblyInfo.cs
+/Users/babayev_/Desktop/Eduhome/Eduhome/Exceptions/obj/Debug/netcoreapp3.1/Exceptions.csproj.CoreCompileInputs.cache
+/Users/babayev_/Desktop/Eduhome/Eduhome/Exceptions/obj/Debug/netcoreapp3.1/Exceptions.dll
+/Users/babayev_/Desktop/Eduhome/Eduhome/Exceptions/obj/Debug/netcoreapp3.1/Exceptions.pdb
