@@ -5786,6 +5786,7 @@
     ".NETCoreApp,Version=v3.1": [
       "Business >= 1.0.0",
       "DAL >= 1.0.0",
+      "Exceptions >= 1.0.0",
       "Microsoft.EntityFrameworkCore >= 3.1.26",
       "Microsoft.EntityFrameworkCore.SqlServer >= 3.1.26",
       "Microsoft.EntityFrameworkCore.Tools >= 3.1.26",
@@ -5822,6 +5823,9 @@
             },
             "/Users/babayev_/Desktop/Eduhome/Eduhome/DAL/DAL.csproj": {
               "projectPath": "/Users/babayev_/Desktop/Eduhome/Eduhome/DAL/DAL.csproj"
+            },
+            "/Users/babayev_/Desktop/Eduhome/Eduhome/Exceptions/Exceptions.csproj": {
+              "projectPath": "/Users/babayev_/Desktop/Eduhome/Eduhome/Exceptions/Exceptions.csproj"
             },
             "/Users/babayev_/Desktop/Eduhome/Eduhome/Utilities/Utilities.csproj": {
               "projectPath": "/Users/babayev_/Desktop/Eduhome/Eduhome/Utilities/Utilities.csproj"

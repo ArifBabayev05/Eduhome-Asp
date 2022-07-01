@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Business.Services;
+using DAL.Models;
 using Exceptions.Entity;
 using Microsoft.AspNetCore.Mvc;
 using Utilities.Helpers;
@@ -15,6 +16,7 @@ namespace Eduhome.Areas.Admin.Controllers
     public class CardController : Controller
     {
         private readonly ICardService _Card;
+
         public CardController(ICardService Card)
         {
             _Card = Card;
@@ -44,6 +46,109 @@ namespace Eduhome.Areas.Admin.Controllers
                 });
             }
 
+        }
+        public async Task<IActionResult> Details(int? id)
+        {
+            Card card;
+            try
+            {
+                card = await _Card.Get(id);
+            }
+            catch (ArgumentNullException ex)
+            {
+                throw ex;
+            }
+            catch (NullReferenceException ex)
+            {
+                throw ex;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+
+            return View(card);
+        }
+
+        public async Task<IActionResult> Create()
+        {
+            //var categories = await _categoryService.GetAll();
+            //ViewData["categoies"] = categories;
+
+            return View();
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Create(Card card)
+        {
+            //var categories = await _categoryService.GetAll();
+            //ViewData["categoies"] = categories;
+            if (!ModelState.IsValid)
+            {
+                return View(card);
+            }
+
+            await _Card.Create(card);
+
+            return RedirectToAction(nameof(Index));
+        }
+
+        public async Task<IActionResult> Update(int? id)
+        {
+            if (id is null)
+            {
+                throw new ArgumentNullException("Id");
+            }
+            var data = await _Card.Get(id);
+            if (data is null)
+            {
+                throw new NullReferenceException("card is null");
+            }
+
+            //var categories = await _categoryService.GetAll();
+            //ViewData["categoies"] = categories;
+
+            return View(data);
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Update(int id, Card card)
+        {
+            //var categories = await _categoryService.GetAll();
+            //ViewData["categoies"] = categories;
+
+            if (!ModelState.IsValid)
+            {
+                return View(card);
+            }
+
+            await _Card.Update(id, card);
+
+            return RedirectToAction(nameof(Index));
+        }
+
+
+        public async Task<IActionResult> Delete(int id)
+        {
+            try
+            {
+                await _Card.Delete(id);
+            }
+            catch (ArgumentNullException ex)
+            {
+                throw ex;
+            }
+            catch (NullReferenceException ex)
+            {
+                throw ex;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            return RedirectToAction(nameof(Index));
         }
     }
 }
