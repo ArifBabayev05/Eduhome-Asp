@@ -30,13 +30,12 @@ namespace Eduhome
 
             services.AddDbContext<AppDbContext>(options =>
             {
-                options.UseSqlServer(_config.GetConnectionString("Default"), options =>
-                {
-                    options.MigrationsAssembly("P226Eduhome");
-                });
+                options.UseSqlServer(_config.GetConnectionString("Default"));
             });
 
             services.AddScoped<ISliderService, SliderRepository>();
+            services.AddScoped<ICardService, CardRepository>();
+            
 
         }
 
