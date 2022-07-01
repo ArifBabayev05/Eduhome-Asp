@@ -14,9 +14,11 @@ namespace Eduhome.Controllers
     public class HomeController : Controller
     {
         private readonly ISliderService _sliderService;
-        public HomeController(ISliderService sliderService)
+        private readonly ICardService _cardService;
+        public HomeController(ISliderService sliderService, ICardService cardService)
         {
-            _sliderService = sliderService;       
+            _sliderService = sliderService;
+            _cardService = cardService;
         }
 
 
@@ -25,6 +27,7 @@ namespace Eduhome.Controllers
             HomeVM homeVM = new HomeVM();
 
             homeVM.Sliders = await _sliderService.GetAll();
+            homeVM.Cards = await _cardService.GetAll();
             return View(homeVM);
         }
     }
