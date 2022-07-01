@@ -12,6 +12,13 @@
     <None Remove="Microsoft.EntityFrameworkCore" />
     <None Remove="Microsoft.EntityFrameworkCore.SqlServer" />
     <None Remove="Microsoft.EntityFrameworkCore.Tools" />
+    <None Remove="Areas\" />
+    <None Remove="Areas\Admin\" />
+    <None Remove="Areas\Admin\Controllers\" />
+    <None Remove="Areas\Admin\Views\" />
+    <None Remove="Areas\Admin\Views\Shared\" />
+    <None Remove="Areas\Admin\Views\Dashboard\" />
+    <None Remove="Areas\Admin\Views\Slider\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Controllers\" />
@@ -22,12 +29,23 @@
     <Folder Include="wwwroot\assets\" />
     <Folder Include="wwwroot\assets\uploads\" />
     <Folder Include="wwwroot\assets\uploads\images\" />
+    <Folder Include="Areas\" />
+    <Folder Include="Areas\Admin\" />
+    <Folder Include="Areas\Admin\Controllers\" />
+    <Folder Include="Areas\Admin\Views\" />
+    <Folder Include="wwwroot\Areas\" />
+    <Folder Include="wwwroot\Areas\Admin\" />
+    <Folder Include="Areas\Admin\Views\Shared\" />
+    <Folder Include="Areas\Admin\Views\Dashboard\" />
+    <Folder Include="Areas\Admin\Views\Slider\" />
   </ItemGroup>
   <ItemGroup>
     <Content Remove="wwwroot\" />
     <Content Remove="wwwroot\assets\" />
     <Content Remove="wwwroot\assets\uploads\" />
     <Content Remove="wwwroot\assets\uploads\images\" />
+    <Content Remove="wwwroot\Area\" />
+    <Content Remove="wwwroot\Area\Admin\" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="3.1.26" />
@@ -42,6 +60,9 @@
       <GlobalPropertiesToRemove></GlobalPropertiesToRemove>
     </ProjectReference>
     <ProjectReference Include="..\Business\Business.csproj">
+      <GlobalPropertiesToRemove></GlobalPropertiesToRemove>
+    </ProjectReference>
+    <ProjectReference Include="..\Utilities\Utilities.csproj">
       <GlobalPropertiesToRemove></GlobalPropertiesToRemove>
     </ProjectReference>
   </ItemGroup>
