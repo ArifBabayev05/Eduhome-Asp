@@ -3,10 +3,10 @@ using DAL.Entity;
 
 namespace DAL.Models
 {
-    public class User : IEntity
+    public class City : IEntity
     {
         public int Id { get; set; }
-        public string FullName { get; set; }
+        public string Name { get; set; }
     }
 }
 

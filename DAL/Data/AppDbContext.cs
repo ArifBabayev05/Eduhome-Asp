@@ -13,6 +13,8 @@ namespace DAL.Data
         public DbSet<Image> Images { get; set; }
         public DbSet<User> Users { get; set; }
         public DbSet<Blog> Blogs { get; set; }
+        public DbSet<City> Cities { get; set; }
+        public DbSet<Event> Events { get; set; }
     }
 }
 
