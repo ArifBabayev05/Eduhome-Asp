@@ -1,0 +1,49 @@
+﻿@model List<Event>
+
+    <div class="col-lg-12 grid-margin stretch-card">
+        <div class="card">
+            <div class="card-body">
+                <h1 class="card-title">Events</h1>
+                <div class="d-flex justify-content-between my-3">
+                    <a asp-area="admin" asp-controller="dashboard" asp-action="index" class="btn btn-secondary">Go Back</a>
+                    <a asp-area="admin" asp-controller="event" asp-action="create" class="btn btn-success">Create</a>
+                </div>
+                <div class="table-responsive">
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                               
+                                <th>
+                                    Title
+                                </th>
+                                <th>
+                                    City
+                                </th>
+                                <th>
+                                    Settings
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var myEvent in Model)
+                            {
+                                <tr>
+                                    <td>
+                                        @myEvent.Title
+                                    </td>
+                                    <td>
+                                        @myEvent.City.Name
+                                    </td>
+                                    <td>
+                                        <a asp-area="admin" asp-controller="card" asp-action="details" asp-route-id="@myEvent.Id" class="btn btn-primary">Details</a>
+                                        <a asp-area="admin" asp-controller="card" asp-action="update" asp-route-id="@myEvent.Id" class="btn btn-warning">Update</a>
+                                        <a asp-area="admin" asp-controller="card" asp-action="delete" asp-route-id="@myEvent.Id" class="btn btn-danger">Delete</a>
+                                    </td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
