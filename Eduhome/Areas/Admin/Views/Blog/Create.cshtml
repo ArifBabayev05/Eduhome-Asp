@@ -1,23 +1,23 @@
-﻿@model Card
+﻿@model Blog
+
 
 <div class="container">
     <div class="row">
         <div class="col-md-12 grid-margin stretch-card">
             <div class="card">
                 <div class="card-body">
-                    <h4 class="card-title">Update - Cards</h4>
+                    <h4 class="card-title">Create - Blog</h4>
                     <form enctype="multipart/form-data" method="post" class="forms-sample">
                         <div class="form-group">
-                            <label asp-for="Title">Name</label>
-                            <input asp-for="Title" class="form-control" placeholder="Name">
+                            <label asp-for="Title">Title</label>
+                            <input asp-for="Title" class="form-control" placeholder="Title">
                             <span asp-validation-for="Title" class="text-danger"></span>
                         </div>
                         <div class="form-group">
-                            <label asp-for="Text">Text</label>
-                            <input asp-for="Text" class="form-control" placeholder="Text">
-                            <span asp-validation-for="Text" class="text-danger"></span>
+                            <label asp-for="UserId">User</label>
+                            <input asp-for="UserId" class="form-control" placeholder="User">
+                            <span asp-validation-for="UserId" class="text-danger"></span>
                         </div>
-                        
                         <div class="form-group">
                             <label asp-for="ImageId">Image</label>
                             <input asp-for="ImageId" class="form-control" placeholder="Image">
@@ -25,7 +25,7 @@
                         </div>
 
                         <button type="submit" class="btn btn-primary mr-2">Submit</button>
-                        <button asp-controller="card" asp-action="index" class="btn btn-light">Cancel</button>
+                        <button asp-controller="blog" asp-action="index" class="btn btn-light">Cancel</button>
                     </form>
                 </div>
             </div>

@@ -15,10 +15,12 @@ namespace Eduhome.Controllers
     {
         private readonly ISliderService _sliderService;
         private readonly ICardService _cardService;
-        public HomeController(ISliderService sliderService, ICardService cardService)
+        private readonly IBlogService _blogService;
+        public HomeController(ISliderService sliderService, ICardService cardService, IBlogService blogService)
         {
             _sliderService = sliderService;
             _cardService = cardService;
+            _blogService = blogService;
         }
 
 
@@ -28,6 +30,7 @@ namespace Eduhome.Controllers
 
             homeVM.Sliders = await _sliderService.GetAll();
             homeVM.Cards = await _cardService.GetAll();
+            homeVM.Blogs = await _blogService.GetAll();
             return View(homeVM);
         }
     }

@@ -90,3 +90,7 @@
 /Users/babayev_/Desktop/Eduhome/Eduhome/Eduhome/obj/Debug/netcoreapp3.1/Razor/Areas/Admin/Views/Card/Update.cshtml.g.cs
 /Users/babayev_/Desktop/Eduhome/Eduhome/Eduhome/obj/Debug/netcoreapp3.1/Razor/Areas/Admin/Views/Slider/Create.cshtml.g.cs
 /Users/babayev_/Desktop/Eduhome/Eduhome/Eduhome/obj/Debug/netcoreapp3.1/Razor/Areas/Admin/Views/Slider/Update.cshtml.g.cs
+/Users/babayev_/Desktop/Eduhome/Eduhome/Eduhome/obj/Debug/netcoreapp3.1/Razor/Areas/Admin/Views/Blog/Create.cshtml.g.cs
+/Users/babayev_/Desktop/Eduhome/Eduhome/Eduhome/obj/Debug/netcoreapp3.1/Razor/Areas/Admin/Views/Blog/Details.cshtml.g.cs
+/Users/babayev_/Desktop/Eduhome/Eduhome/Eduhome/obj/Debug/netcoreapp3.1/Razor/Areas/Admin/Views/Blog/Index.cshtml.g.cs
+/Users/babayev_/Desktop/Eduhome/Eduhome/Eduhome/obj/Debug/netcoreapp3.1/Razor/Areas/Admin/Views/Blog/Update.cshtml.g.cs
