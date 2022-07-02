@@ -21,6 +21,7 @@
     <None Remove="Areas\Admin\Views\Slider\" />
     <None Remove="Areas\Admin\Views\Card\" />
     <None Remove="Areas\Admin\Views\Blog\" />
+    <None Remove="Areas\Admin\Views\Event\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Controllers\" />
@@ -42,6 +43,7 @@
     <Folder Include="Areas\Admin\Views\Slider\" />
     <Folder Include="Areas\Admin\Views\Card\" />
     <Folder Include="Areas\Admin\Views\Blog\" />
+    <Folder Include="Areas\Admin\Views\Event\" />
   </ItemGroup>
   <ItemGroup>
     <Content Remove="wwwroot\" />
