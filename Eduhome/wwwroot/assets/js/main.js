@@ -127,4 +127,6 @@ $(".notice-left").niceScroll({
             
         });
 
-})(jQuery);	
+})(jQuery);
+
+var firstCol = document.getElementsByClassName("firstCol");

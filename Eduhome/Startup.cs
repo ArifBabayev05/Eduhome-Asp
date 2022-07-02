@@ -36,7 +36,7 @@ namespace Eduhome
             services.AddScoped<ISliderService, SliderRepository>();
             services.AddScoped<ICardService, CardRepository>();
             services.AddScoped<IBlogService, BlogRepository>();
-            
+            services.AddScoped<IEventService, EventRepository>();            
 
         }
 
