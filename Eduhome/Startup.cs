@@ -13,6 +13,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 
+
 namespace Eduhome
 {
     public class Startup
@@ -38,6 +39,7 @@ namespace Eduhome
             services.AddScoped<IBlogService, BlogRepository>();
             services.AddScoped<IEventService, EventRepository>();
             services.AddScoped<IImageService, ImageRepository>();
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

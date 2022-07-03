@@ -44,6 +44,8 @@ namespace Eduhome.Areas.Admin.Controllers
                     message = ex.Message
                 });
             }
+
+           
             catch (Exception ex)
             {
                 return Json(new

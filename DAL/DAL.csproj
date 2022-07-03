@@ -13,6 +13,7 @@
     <None Remove="Microsoft.EntityFrameworkCore.SqlServer" />
     <None Remove="Microsoft.EntityFrameworkCore.Tools" />
     <None Remove="Microsoft.AspNetCore.Http" />
+    <None Remove="ReflectionIT.Mvc.Paging" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Models\" />
