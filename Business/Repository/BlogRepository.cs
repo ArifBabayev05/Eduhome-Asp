@@ -49,6 +49,7 @@ namespace Business.Repository
             return data;
         }
 
+
         public async Task Create(Blog entity)
         {
             entity.CreatedDate = DateTime.UtcNow.AddHours(4);

@@ -31,6 +31,7 @@
     <None Remove="Microsoft.Extensions.Globalization.CultureInfoCache" />
     <None Remove="System.Globalization" />
     <None Remove="Microsoft.AspNetCore.Http" />
+    <None Remove="ReflectionIT.Mvc.Paging" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Controllers\" />
@@ -69,7 +70,6 @@
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
       <PrivateAssets>all</PrivateAssets>
     </PackageReference>
-    <PackageReference Include="System.Globalization" Version="4.3.0" />
     <PackageReference Include="Microsoft.AspNetCore.Http" Version="2.2.2" />
   </ItemGroup>
   <ItemGroup>
