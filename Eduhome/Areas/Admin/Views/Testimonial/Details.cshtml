@@ -1,0 +1,56 @@
+﻿@model Testimonial
+
+<div class="col-lg-12 grid-margin stretch-card">
+    <div class="card">
+        <div class="card-body">
+            <h1 class="card-title">Testimonial</h1>
+            <div class="d-flex justify-content-between my-3">
+                <a asp-area="admin" asp-controller="testimonial" asp-action="index" class="btn btn-secondary">Go Back</a>
+            </div>
+            <div class="table-responsive">
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>
+                                Image
+                            </th>
+                            <th>
+                                Text
+                            </th>
+                            <th>
+                                User
+                            </th>
+                            <th>
+                                Position
+                            </th>
+                            <th>
+                                Settings
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="py-1">
+                                <img src="~/assets/uploads/images/@Model.Image.Name" alt="image" />
+                            </td>
+                            <td>
+                                @Model.Text
+                            </td>
+                            <td>
+                                @Model.User.FullName
+                            </td>
+                            <td>
+                                @Model.Position.Name
+                            </td>
+
+                            <td>
+                                <a asp-area="admin" asp-controller="testimonial" asp-action="update" class="btn btn-warning">Update</a>
+                                <a asp-area="admin" asp-controller="testimonial" asp-action="delete" class="btn btn-danger">Delete</a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

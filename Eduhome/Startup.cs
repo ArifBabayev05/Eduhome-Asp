@@ -39,6 +39,7 @@ namespace Eduhome
             services.AddScoped<IBlogService, BlogRepository>();
             services.AddScoped<IEventService, EventRepository>();
             services.AddScoped<IImageService, ImageRepository>();
+            services.AddScoped<ITestimonialService, TestimonialRepository>();
 
         }
 

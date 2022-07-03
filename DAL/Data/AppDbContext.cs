@@ -1,4 +1,5 @@
 ﻿using System;
+using System.ComponentModel.DataAnnotations;
 using DAL.Models;
 using Microsoft.EntityFrameworkCore;
 
@@ -16,6 +17,8 @@ namespace DAL.Data
         public DbSet<City> Cities { get; set; }
         public DbSet<Event> Events { get; set; }
         public DbSet<Position> Positions { get; set; }
+        public DbSet<Testimonial> Testimonials{ get; set; }
+
 
     }
 }
