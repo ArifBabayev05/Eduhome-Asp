@@ -1,10 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
 using Business.Services;
 using DAL.Models;
 using Exceptions.Entity;
+using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
 using Utilities.Helpers;
 
@@ -16,9 +18,13 @@ namespace Eduhome.Areas.Admin.Controllers
     public class SliderController : Controller
     {
         private readonly ISliderService _slider;
-        public SliderController(ISliderService slider)
+        private readonly IWebHostEnvironment _env;
+        private readonly IImageService _imageService;
+        public SliderController(ISliderService slider, IWebHostEnvironment env,IImageService imageService)
         {
             _slider = slider;
+            _env = env;
+            _imageService = imageService;
         }
         // GET: /<controller>/
         public async Task<IActionResult> Index()
@@ -71,8 +77,7 @@ namespace Eduhome.Areas.Admin.Controllers
 
         public async Task<IActionResult> Create()
         {
-            //var categories = await _categoryService.GetAll();
-            //ViewData["categoies"] = categories;
+            
 
             return View();
         }
@@ -81,12 +86,31 @@ namespace Eduhome.Areas.Admin.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create(Slider card)
         {
-            //var categories = await _categoryService.GetAll();
-            //ViewData["categoies"] = categories;
             if (!ModelState.IsValid)
             {
                 return View(card);
             }
+            string fileName = Guid.NewGuid().ToString() + card.ImageFile.FileName;
+
+            if (fileName.Length > 255)
+            {
+                fileName = fileName.Substring(fileName.Length - 254);
+            }
+
+            string path = Path.Combine(_env.WebRootPath, "assets", "uploads", "images", fileName);
+
+            using (FileStream fs = new FileStream(path, FileMode.Create))
+            {
+                await card.ImageFile.CopyToAsync(fs);
+            }
+
+            Image image = new();
+
+            image.Name = fileName;
+
+            await _imageService.Create(image);
+
+            card.ImageId = image.Id;
 
             await _slider.Create(card);
 

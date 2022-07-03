@@ -36,8 +36,8 @@ namespace Eduhome
             services.AddScoped<ISliderService, SliderRepository>();
             services.AddScoped<ICardService, CardRepository>();
             services.AddScoped<IBlogService, BlogRepository>();
-            services.AddScoped<IEventService, EventRepository>();            
-
+            services.AddScoped<IEventService, EventRepository>();
+            services.AddScoped<IImageService, ImageRepository>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

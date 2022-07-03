@@ -1,10 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
 using Business.Services;
 using DAL.Models;
 using Exceptions.Entity;
+using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
 using Utilities.Helpers;
 
@@ -17,9 +19,14 @@ namespace Eduhome.Areas.Admin.Controllers
     {
         // GET: /<controller>/
         private readonly IBlogService _blogService;
-        public BlogController(IBlogService blogService)
+        private readonly IWebHostEnvironment _env;
+        private readonly IImageService _imageService;
+        public BlogController(IBlogService blogService, IWebHostEnvironment env, IImageService imageService)
         {
             _blogService = blogService;
+            _env = env;
+            _imageService = imageService;
+
         }
 
         public async Task<IActionResult> Index()
@@ -79,11 +86,31 @@ namespace Eduhome.Areas.Admin.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create(Blog blog)
         {
-
             if (!ModelState.IsValid)
             {
                 return View(blog);
+            } 
+            string fileName = Guid.NewGuid().ToString() + blog.ImageFile.FileName;
+
+            if (fileName.Length>255)
+            {
+                fileName = fileName.Substring(fileName.Length - 254);
             }
+
+            string path = Path.Combine(_env.WebRootPath, "assets", "uploads", "images",fileName);
+
+            using(FileStream fs = new FileStream(path, FileMode.Create))
+            {
+                await blog.ImageFile.CopyToAsync(fs);
+            }
+
+            Image image = new();
+
+            image.Name = fileName;
+
+            await _imageService.Create(image);
+
+            blog.ImageId = image.Id;
 
             await _blogService.Create(blog);
 

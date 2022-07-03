@@ -1,10 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
 using Business.Services;
 using DAL.Models;
 using Exceptions.Entity;
+using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
 using Utilities.Helpers;
 
@@ -16,10 +18,14 @@ namespace Eduhome.Areas.Admin.Controllers
     public class CardController : Controller
     {
         private readonly ICardService _Card;
+        private readonly IWebHostEnvironment _env;
+        private readonly IImageService _imageService;
 
-        public CardController(ICardService Card)
+        public CardController(ICardService Card, IWebHostEnvironment env, IImageService imageService)
         {
             _Card = Card;
+            _env = env;
+            _imageService = imageService;
         }
         // GET: /<controller>/
         public async Task<IActionResult> Index()
@@ -82,12 +88,31 @@ namespace Eduhome.Areas.Admin.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create(Card card)
         {
-            //var categories = await _categoryService.GetAll();
-            //ViewData["categoies"] = categories;
             if (!ModelState.IsValid)
             {
                 return View(card);
             }
+            string fileName = Guid.NewGuid().ToString() + card.ImageFile.FileName;
+
+            if (fileName.Length > 255)
+            {
+                fileName = fileName.Substring(fileName.Length - 254);
+            }
+
+            string path = Path.Combine(_env.WebRootPath, "assets", "uploads", "images", fileName);
+
+            using (FileStream fs = new FileStream(path, FileMode.Create))
+            {
+                await card.ImageFile.CopyToAsync(fs);
+            }
+         
+            Image image = new();
+
+            image.Name = fileName;
+
+            await _imageService.Create(image);
+
+            card.ImageId = image.Id;
 
             await _Card.Create(card);
 

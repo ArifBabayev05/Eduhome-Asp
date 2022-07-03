@@ -1,36 +1,33 @@
 ﻿<Properties StartupConfiguration="{B2028D3B-B358-482D-AF81-BED6A2AC2B4F}|Default">
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Business/Repository/SliderRepository.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Eduhome/Areas/Admin/Controllers/BlogController.cs">
     <Files>
-      <File FileName="Business/Repository/CardRepository.cs" Line="21" Column="10" />
-      <File FileName="DAL/Models/Blog.cs" Line="14" Column="39" />
-      <File FileName="Eduhome/Areas/Admin/Views/Blog/Index.cshtml" Line="40" Column="41" />
-      <File FileName="Eduhome/wwwroot/assets/css/style.css" Line="1290" Column="40" />
-      <File FileName="Business/Repository/SliderRepository.cs" Line="18" Column="32" />
-      <File FileName="Business/ViewModels/Home/HomeVM.cs" Line="16" Column="1" />
-      <File FileName="DAL/Base/BaseEntity.cs" Line="1" Column="1" />
-      <File FileName="DAL/Data/AppDbContext.cs" Line="17" Column="49" />
-      <File FileName="DAL/Models/City.cs" Line="9" Column="27" />
-      <File FileName="DAL/Models/User.cs" Line="9" Column="35" />
-      <File FileName="DAL/Models/Card.cs" Line="1" Column="1" />
-      <File FileName="DAL/Models/Slider.cs" Line="7" Column="47" />
-      <File FileName="DAL/Models/Image.cs" Line="6" Column="24" />
-      <File FileName="Eduhome/Controllers/HomeController.cs" Line="1" Column="1" />
-      <File FileName="Eduhome/Properties/launchSettings.json" Line="1" Column="1" />
-      <File FileName="Eduhome/Views/Home/Index.cshtml" Line="1" Column="1" />
-      <File FileName="Eduhome/Views/_ViewImports.cshtml" Line="1" Column="1" />
-      <File FileName="Eduhome/Views/_ViewStart.cshtml" Line="1" Column="1" />
-      <File FileName="Eduhome/appsettings.json" Line="1" Column="1" />
-      <File FileName="Eduhome/Program.cs" Line="1" Column="1" />
-      <File FileName="Eduhome/Startup.cs" Line="1" Column="1" />
-      <File FileName="Business/Base/IBaseService.cs" Line="1" Column="1" />
-      <File FileName="Business/Repository/EventRepository.cs" Line="76" Column="1" />
-      <File FileName="Business/Services/IEventService.cs" Line="12" Column="1" />
-      <File FileName="Business/Services/ISliderService.cs" Line="1" Column="1" />
-      <File FileName="DAL/Models/Event.cs" Line="7" Column="32" />
-      <File FileName="Business/Services/ICardService.cs" Line="1" Column="1" />
-      <File FileName="Business/Services/IBlogService.cs" Line="13" Column="40" />
+      <File FileName="Business/Services/IEventService.cs" Line="7" Column="56" />
+      <File FileName="Eduhome/Areas/Admin/Controllers/BlogController.cs" Line="109" Column="35" />
+      <File FileName="Eduhome/Areas/Admin/Controllers/SliderController.cs" Line="113" Column="37" />
+      <File FileName="Eduhome/Areas/Admin/Controllers/CardController.cs" Line="99" Column="9" />
+      <File FileName="Eduhome/Areas/Admin/Controllers/EventController.cs" Line="117" Column="36" />
+      <File FileName="Eduhome/Areas/Admin/Controllers/DashboardController.cs" Line="1" Column="1" />
+      <File FileName="Eduhome/Areas/Admin/Views/Blog/Create.cshtml" Line="23" Column="53" />
+      <File FileName="Eduhome/Areas/Admin/Views/Blog/Details.cshtml" Line="1" Column="1" />
+      <File FileName="Eduhome/Areas/Admin/Views/Event/Create.cshtml" Line="20" Column="31" />
+      <File FileName="Eduhome/Areas/Admin/Views/Event/Details.cshtml" Line="36" Column="74" />
+      <File FileName="Eduhome/Areas/Admin/Views/Event/Index.cshtml" Line="39" Column="125" />
+      <File FileName="Eduhome/Areas/Admin/Views/Event/Update.cshtml" Line="27" Column="11" />
+      <File FileName="Eduhome/Areas/Admin/Views/Shared/_AdminLayout.cshtml" Line="215" Column="47" />
+      <File FileName="Eduhome/wwwroot/assets/js/main.js" Line="133" Column="1" />
+      <File FileName="Eduhome/Areas/Admin/Views/Slider/Create.cshtml" Line="22" Column="53" />
+      <File FileName="Eduhome/Areas/Admin/Views/Slider/Index.cshtml" Line="1" Column="1" />
+      <File FileName="Eduhome/Areas/Admin/Views/Slider/Update.cshtml" Line="1" Column="1" />
+      <File FileName="Eduhome/Areas/Admin/Views/Card/Create.cshtml" Line="23" Column="35" />
+      <File FileName="Business/Services/IImageService.cs" Line="7" Column="53" />
+      <File FileName="Business/Repository/ImageRepository.cs" Line="71" Column="10" />
+      <File FileName="Business/Repository/SliderRepository.cs" Line="1" Column="1" />
       <File FileName="Business/Repository/BlogRepository.cs" Line="1" Column="1" />
+      <File FileName="Business/Services/ISliderService.cs" Line="1" Column="1" />
+      <File FileName="DAL/Models/Image.cs" Line="6" Column="23" />
+      <File FileName="Business/Services/ICardService.cs" Line="1" Column="1" />
+      <File FileName="Business/Repository/CardRepository.cs" Line="1" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -38,9 +35,7 @@
           <Node name="Eduhome" expanded="True">
             <Node name="Business" expanded="True">
               <Node name="Base" expanded="True" />
-              <Node name="Repository" expanded="True">
-                <Node name="SliderRepository.cs" selected="True" />
-              </Node>
+              <Node name="Repository" expanded="True" />
               <Node name="Services" expanded="True" />
               <Node name="ViewModels" expanded="True">
                 <Node name="Home" expanded="True" />
@@ -51,21 +46,7 @@
               <Node name="Data" expanded="True" />
               <Node name="Models" expanded="True" />
             </Node>
-            <Node name="Eduhome" expanded="True">
-              <Node name="Areas" expanded="True">
-                <Node name="Admin" expanded="True">
-                  <Node name="Controllers" expanded="True" />
-                  <Node name="Views" expanded="True">
-                    <Node name="Blog" expanded="True" />
-                  </Node>
-                </Node>
-              </Node>
-              <Node name="Controllers" expanded="True" />
-              <Node name="Properties" expanded="True" />
-              <Node name="Views" expanded="True">
-                <Node name="Home" expanded="True" />
-              </Node>
-            </Node>
+            <Node name="Eduhome" expanded="True" />
             <Node name="Utilities" expanded="True">
               <Node name="Helpers" expanded="True" />
             </Node>
