@@ -5790,6 +5790,7 @@
       "Microsoft.EntityFrameworkCore >= 3.1.26",
       "Microsoft.EntityFrameworkCore.SqlServer >= 3.1.26",
       "Microsoft.EntityFrameworkCore.Tools >= 3.1.26",
+      "System.Globalization >= 4.3.0",
       "Utilities >= 1.0.0"
     ]
   },
@@ -5856,6 +5857,10 @@
             "suppressParent": "All",
             "target": "Package",
             "version": "[3.1.26, )"
+          },
+          "System.Globalization": {
+            "target": "Package",
+            "version": "[4.3.0, )"
           }
         },
         "imports": [
