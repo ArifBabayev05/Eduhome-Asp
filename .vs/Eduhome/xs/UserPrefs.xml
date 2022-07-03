@@ -1,10 +1,15 @@
 ﻿<Properties StartupConfiguration="{B2028D3B-B358-482D-AF81-BED6A2AC2B4F}|Default">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Eduhome/Startup.cs">
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workbench ActiveDocument="DAL/Data/AppDbContext.cs">
     <Files>
       <File FileName="Business/Repository/CardRepository.cs" Line="1" Column="1" />
       <File FileName="Business/Repository/ImageRepository.cs" Line="18" Column="19" />
-      <File FileName="Business/Repository/EventRepository.cs" Line="12" Column="2" />
+      <File FileName="Business/Repository/EventRepository.cs" Line="60" Column="47" />
       <File FileName="Eduhome/Areas/Admin/Controllers/BlogController.cs" Line="31" Column="1" />
       <File FileName="Eduhome/Areas/Admin/Controllers/EventController.cs" Line="1" Column="1" />
       <File FileName="Eduhome/Areas/Admin/Controllers/CardController.cs" Line="61" Column="43" />
@@ -20,15 +25,15 @@
       <File FileName="Eduhome/Program.cs" Line="1" Column="1" />
       <File FileName="Eduhome/Startup.cs" Line="15" Column="1" />
       <File FileName="DAL/Models/Event.cs" Line="1" Column="1" />
-      <File FileName="DAL/Models/Slider.cs" Line="1" Column="1" />
+      <File FileName="DAL/Models/Slider.cs" Line="9" Column="37" />
       <File FileName="DAL/Models/User.cs" Line="6" Column="32" />
       <File FileName="DAL/Models/Image.cs" Line="1" Column="1" />
-      <File FileName="DAL/Models/Position.cs" Line="10" Column="6" />
-      <File FileName="DAL/Data/AppDbContext.cs" Line="19" Column="54" />
+      <File FileName="DAL/Models/Position.cs" Line="10" Column="36" />
+      <File FileName="DAL/Data/AppDbContext.cs" Line="19" Column="55" />
       <File FileName="DAL/Base/BaseEntity.cs" Line="1" Column="1" />
       <File FileName="Eduhome/Views/_ViewStart.cshtml" Line="1" Column="1" />
       <File FileName="Business/Services/IImageService.cs" Line="1" Column="1" />
-      <File FileName="DAL/Models/Carousel.cs" Line="19" Column="39" />
+      <File FileName="DAL/Models/Testimonial.cs" Line="23" Column="44" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -43,7 +48,9 @@
             </Node>
             <Node name="DAL" expanded="True">
               <Node name="Base" expanded="True" />
-              <Node name="Data" expanded="True" />
+              <Node name="Data" expanded="True">
+                <Node name="AppDbContext.cs" selected="True" />
+              </Node>
               <Node name="Models" expanded="True" />
             </Node>
             <Node name="Eduhome" expanded="True">
@@ -62,7 +69,6 @@
               <Node name="Views" expanded="True">
                 <Node name="Home" expanded="True" />
               </Node>
-              <Node name="Startup.cs" selected="True" />
             </Node>
             <Node name="Utilities" expanded="True">
               <Node name="Helpers" expanded="True" />
@@ -75,10 +81,5 @@
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
-  <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
-  </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MultiItemStartupConfigurations />
   <MonoDevelop.Ide.ItemProperties.Eduhome PreferredExecutionTarget="/Applications/Google Chrome.app" />
 </Properties>

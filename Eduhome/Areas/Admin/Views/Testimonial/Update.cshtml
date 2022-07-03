@@ -1,0 +1,38 @@
+﻿@model Testimonial
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-12 grid-margin stretch-card">
+            <div class="card">
+                <div class="card-body">
+                    <h4 class="card-title">Update - Testimonial</h4>
+                    <form enctype="multipart/form-data" method="post" class="forms-sample">
+                        <div class="form-group">
+                            <label asp-for="Text">Text</label>
+                            <input asp-for="Text" class="form-control" placeholder="Text">
+                            <span asp-validation-for="Text" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="UserId">User</label>
+                            <input asp-for="UserId" class="form-control" placeholder="User">
+                            <span asp-validation-for="UserId" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="PositionId">Position</label>
+                            <input asp-for="PositionId" class="form-control" placeholder="Position">
+                            <span asp-validation-for="PositionId" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="ImageFile">Image</label>
+                            <input accept="image/*" asp-for="ImageFile" class="form-control" placeholder="Image">
+                            <span asp-validation-for="ImageFile" class="text-danger"></span>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary mr-2">Submit</button>
+                        <button asp-controller="testimonial" asp-action="index" class="btn btn-light">Cancel</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

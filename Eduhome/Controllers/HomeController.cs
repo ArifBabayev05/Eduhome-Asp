@@ -17,15 +17,18 @@ namespace Eduhome.Controllers
         private readonly ICardService _cardService;
         private readonly IBlogService _blogService;
         private readonly IEventService _eventService;
+        private readonly ITestimonialService _testimonialService;
         public HomeController(ISliderService sliderService,
                               ICardService cardService,
                               IBlogService blogService,
-                              IEventService eventService)
+                              IEventService eventService,
+                              ITestimonialService testimonialService)
         {
             _sliderService = sliderService;
             _cardService = cardService;
             _blogService = blogService;
             _eventService = eventService;
+            _testimonialService = testimonialService;
         }
 
 
@@ -37,6 +40,7 @@ namespace Eduhome.Controllers
             homeVM.Cards = await _cardService.GetAll();
             homeVM.Blogs = await _blogService.GetAll();
             homeVM.Events = await _eventService.GetAll();
+            homeVM.Testimonials = await _testimonialService.GetAll();
             return View(homeVM);
         }
     }

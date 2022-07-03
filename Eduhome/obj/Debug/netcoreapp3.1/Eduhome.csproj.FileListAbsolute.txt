@@ -98,3 +98,7 @@
 /Users/babayev_/Desktop/Eduhome/Eduhome/Eduhome/obj/Debug/netcoreapp3.1/Razor/Areas/Admin/Views/Event/Details.cshtml.g.cs
 /Users/babayev_/Desktop/Eduhome/Eduhome/Eduhome/obj/Debug/netcoreapp3.1/Razor/Areas/Admin/Views/Event/Index.cshtml.g.cs
 /Users/babayev_/Desktop/Eduhome/Eduhome/Eduhome/obj/Debug/netcoreapp3.1/Razor/Areas/Admin/Views/Event/Update.cshtml.g.cs
+/Users/babayev_/Desktop/Eduhome/Eduhome/Eduhome/obj/Debug/netcoreapp3.1/Razor/Areas/Admin/Views/Testimonial/Create.cshtml.g.cs
+/Users/babayev_/Desktop/Eduhome/Eduhome/Eduhome/obj/Debug/netcoreapp3.1/Razor/Areas/Admin/Views/Testimonial/Details.cshtml.g.cs
+/Users/babayev_/Desktop/Eduhome/Eduhome/Eduhome/obj/Debug/netcoreapp3.1/Razor/Areas/Admin/Views/Testimonial/Index.cshtml.g.cs
+/Users/babayev_/Desktop/Eduhome/Eduhome/Eduhome/obj/Debug/netcoreapp3.1/Razor/Areas/Admin/Views/Testimonial/Update.cshtml.g.cs
