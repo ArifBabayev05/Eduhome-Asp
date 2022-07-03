@@ -4,6 +4,12 @@
     <TargetFramework>netcoreapp3.1</TargetFramework>
   </PropertyGroup>
 
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <LangVersion>9.0</LangVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <LangVersion>9.0</LangVersion>
+  </PropertyGroup>
   <ItemGroup>
     <None Remove="Controllers\" />
     <None Remove="Views\" />
@@ -24,6 +30,7 @@
     <None Remove="Areas\Admin\Views\Event\" />
     <None Remove="Microsoft.Extensions.Globalization.CultureInfoCache" />
     <None Remove="System.Globalization" />
+    <None Remove="Microsoft.AspNetCore.Http" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Controllers\" />
@@ -63,6 +70,7 @@
       <PrivateAssets>all</PrivateAssets>
     </PackageReference>
     <PackageReference Include="System.Globalization" Version="4.3.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Http" Version="2.2.2" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\DAL\DAL.csproj">

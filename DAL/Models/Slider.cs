@@ -1,6 +1,8 @@
 ﻿using System;
+using System.ComponentModel.DataAnnotations.Schema;
 using DAL.Base;
 using DAL.Entity;
+using Microsoft.AspNetCore.Http;
 
 namespace DAL.Models
 {
@@ -8,6 +10,9 @@ namespace DAL.Models
     {
         public string Title { get; set; }
         public string Body { get; set; }
+
+        [NotMapped]
+        public IFormFile ImageFile { get; set; }
 
         public int ImageId { get; set; }
         public Image Image { get; set; }
