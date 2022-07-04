@@ -11,6 +11,7 @@
     <None Remove="Services\" />
     <None Remove="Base\" />
     <None Remove="ReflectionIT.Mvc.Paging" />
+    <None Remove="ViewModels\Identity\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="ViewModels\" />
@@ -18,6 +19,7 @@
     <Folder Include="Repository\" />
     <Folder Include="Services\" />
     <Folder Include="Base\" />
+    <Folder Include="ViewModels\Account\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\DAL\DAL.csproj" />

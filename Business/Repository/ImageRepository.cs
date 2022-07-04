@@ -35,7 +35,7 @@ namespace Business.Repository
 
         public async Task<List<Image>> GetAll()
         {
-            var entity = await _context.Images .ToListAsync();
+            var entity = await _context.Images.ToListAsync();
 
             if (entity is null)
             {

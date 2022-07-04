@@ -8,6 +8,14 @@ namespace Utilities.Helpers
             DataIsNull=1001,
             GeneralError=1000
         }
+
+        public enum Roles
+        {
+            Admin,
+            Member,
+            SuperAdmin,
+            Manager
+        }
     }
 }
 
