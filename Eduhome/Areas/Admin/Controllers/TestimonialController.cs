@@ -84,13 +84,13 @@ namespace Eduhome.Areas.Admin.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create(Testimonial card)
+        public async Task<IActionResult> Create(Testimonial testimonial)
         {
             if (!ModelState.IsValid)
             {
-                return View(card);
+                return View(testimonial);
             }
-            string fileName = Guid.NewGuid().ToString() + card.ImageFile.FileName;
+            string fileName = Guid.NewGuid().ToString() + testimonial.ImageFile.FileName;
 
             if (fileName.Length > 255)
             {
@@ -101,7 +101,7 @@ namespace Eduhome.Areas.Admin.Controllers
 
             using (FileStream fs = new FileStream(path, FileMode.Create))
             {
-                await card.ImageFile.CopyToAsync(fs);
+                await testimonial.ImageFile.CopyToAsync(fs);
             }
 
             Image image = new();
@@ -110,9 +110,9 @@ namespace Eduhome.Areas.Admin.Controllers
 
             await _imageService.Create(image);
 
-            card.ImageId = image.Id;
+            testimonial.ImageId = image.Id;
 
-            await _Testimonial.Create(card);
+            await _Testimonial.Create(testimonial);
 
             return RedirectToAction(nameof(Index));
         }

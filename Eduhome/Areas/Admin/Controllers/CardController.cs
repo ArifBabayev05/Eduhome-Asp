@@ -131,8 +131,7 @@ namespace Eduhome.Areas.Admin.Controllers
                 throw new NullReferenceException("card is null");
             }
 
-            //var categories = await _categoryService.GetAll();
-            //ViewData["categoies"] = categories;
+        
 
             return View(data);
         }
@@ -141,8 +140,7 @@ namespace Eduhome.Areas.Admin.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Update(int id, Card card)
         {
-            //var categories = await _categoryService.GetAll();
-            //ViewData["categoies"] = categories;
+         
 
             if (!ModelState.IsValid)
             {

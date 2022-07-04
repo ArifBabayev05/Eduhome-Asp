@@ -5,9 +5,11 @@ using System.Threading.Tasks;
 using Business.Repository;
 using Business.Services;
 using DAL.Data;
+using DAL.Identity;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -40,6 +42,17 @@ namespace Eduhome
             services.AddScoped<IEventService, EventRepository>();
             services.AddScoped<IImageService, ImageRepository>();
             services.AddScoped<ITestimonialService, TestimonialRepository>();
+            services.AddIdentity<AppUser, IdentityRole>()
+                    .AddEntityFrameworkStores<AppDbContext>()
+                    .AddDefaultTokenProviders();
+
+            services.Configure<IdentityOptions>(options =>
+            {
+                options.Lockout.MaxFailedAccessAttempts = 3;
+                options.Lockout.DefaultLockoutTimeSpan = System.TimeSpan.FromMinutes(2);
+                options.Password.RequiredLength = 8;
+                options.User.RequireUniqueEmail = true;
+            });
 
         }
 
