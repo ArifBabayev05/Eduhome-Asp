@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using Business.Services;
 using DAL.Models;
 using Exceptions.Entity;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
 using Utilities.Helpers;
@@ -14,7 +15,7 @@ using Utilities.Helpers;
 
 namespace Eduhome.Areas.Admin.Controllers
 {
-    [Area("Admin")]
+    [Area("Admin"), Authorize(Roles = "Admin,SuperAdmin")]
     public class SliderController : Controller
     {
         private readonly ISliderService _slider;
