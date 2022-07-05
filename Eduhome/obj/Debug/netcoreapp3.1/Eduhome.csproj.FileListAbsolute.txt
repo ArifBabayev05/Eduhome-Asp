@@ -109,3 +109,4 @@
 /Users/babayev_/Desktop/Eduhome/Eduhome/Eduhome/bin/Debug/netcoreapp3.1/Microsoft.Extensions.Identity.Stores.dll
 /Users/babayev_/Desktop/Eduhome/Eduhome/Eduhome/obj/Debug/netcoreapp3.1/Razor/Views/Account/Register.cshtml.g.cs
 /Users/babayev_/Desktop/Eduhome/Eduhome/Eduhome/obj/Debug/netcoreapp3.1/Razor/Views/Account/Login.cshtml.g.cs
+/Users/babayev_/Desktop/Eduhome/Eduhome/Eduhome/obj/Debug/netcoreapp3.1/Razor/Views/Account/ConfirmEmail.cshtml.g.cs
