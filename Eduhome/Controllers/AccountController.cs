@@ -133,7 +133,7 @@ namespace Eduhome.Controllers
 
             if (await _userManager.IsInRoleAsync(appUser, Roles.Admin.ToString()))
             {
-                RedirectToAction("Index", "Dashboard" , new { area  = "Admin" });
+                return RedirectToAction("Index", controllerName: "Dashboard", new { area  = "Admin" });
             }
             
             return RedirectToAction("Index", controllerName: "Home");
