@@ -16,11 +16,15 @@ namespace Eduhome.Controllers
     {
         private readonly UserManager<AppUser> _userManager;
         private readonly RoleManager<IdentityRole> _roleManager;
+        private readonly SignInManager<AppUser> _signInManager;
 
-        public AccountController( UserManager<AppUser> userManager, RoleManager<IdentityRole> roleManager)
+        public AccountController( UserManager<AppUser> userManager,
+                                  RoleManager<IdentityRole> roleManager,
+                                  SignInManager<AppUser> signInManager)
         {
             _userManager = userManager;
             _roleManager = roleManager;
+            _signInManager = signInManager;
         }
 
 
@@ -34,6 +38,10 @@ namespace Eduhome.Controllers
         [HttpPost(nameof(Register))]
         public async Task<IActionResult> Register(RegisterVM registerVM)
         {
+            if (User.Identity.IsAuthenticated)
+            {
+                return RedirectToAction("Index", controllerName: "Home");
+            }
             if (!ModelState.IsValid)
             {
                 return View(registerVM); 
@@ -70,21 +78,89 @@ namespace Eduhome.Controllers
 
             }
 
-            return Json(appUser);
+            return RedirectToAction("Index", controllerName: "Home"); 
+        }
+
+        [HttpGet(nameof(Login))]
+        public IActionResult Login()
+        {
             return View();
         }
 
-        //public async Task CreateRoles()
-        //{
-        //    foreach (var item in Enum.GetValues(typeof(Roles)))
-        //    {
-        //        if (!await _roleManager.RoleExistsAsync(item.ToString()))
-        //        {
-        //            await _roleManager.CreateAsync(new IdentityRole(item.ToString()));
-        //        }
-        //    }
 
-        //}
+        [HttpPost(nameof(Login))]
+        public async Task<IActionResult>  Login(LoginVM loginVM)
+        {
+
+            if (User.Identity.IsAuthenticated)
+            {
+               return RedirectToAction("Index", controllerName: "Home");
+            }
+
+            if (!ModelState.IsValid)
+            {
+                return View(loginVM);
+            }
+
+            AppUser appUser =await _userManager.FindByNameAsync(loginVM.Username);
+
+            if (appUser is null)
+            {
+                ModelState.AddModelError("", "User Not Found!");
+                return View(loginVM);
+            }
+
+            var result = await _signInManager.PasswordSignInAsync(appUser, loginVM.Password, loginVM.RememberMe, true);
+
+            if (!result.Succeeded)
+
+            {
+                ModelState.AddModelError("","Invalid Password");
+                return View(loginVM);
+            }
+
+            if (result.IsNotAllowed)
+            {
+                ModelState.AddModelError("", "Please Confirm Your Account");
+                return View();
+            }
+
+            if (result.IsLockedOut)
+            {
+                ModelState.AddModelError("", "Your Account has been locked!");
+                return View();
+            }
+
+            if (await _userManager.IsInRoleAsync(appUser, Roles.Admin.ToString()))
+            {
+                RedirectToAction("Index", "Dashboard" , new { area  = "Admin" });
+            }
+            
+            return RedirectToAction("Index", controllerName: "Home");
+        }
+
+
+        public async Task<IActionResult> Logout()
+        {
+            if (User.Identity.IsAuthenticated)
+            {
+                 await  _signInManager.SignOutAsync();
+            }
+
+            return RedirectToAction("Index", controllerName: "Home");
+        }
+
+        public async Task CreateRoles()
+        {
+            foreach (var item in Enum.GetValues(typeof(Roles)))
+            {
+                if (!await _roleManager.RoleExistsAsync(item.ToString()))
+                {
+                    await _roleManager.CreateAsync(new IdentityRole(item.ToString()));
+                }
+            }
+
+        }
     }
 }
 
