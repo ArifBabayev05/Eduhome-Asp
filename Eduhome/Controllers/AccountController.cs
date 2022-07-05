@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net;
+using System.Net.Mail;
 using System.Threading.Tasks;
 using Business.ViewModels;
 using DAL.Identity;
@@ -68,7 +70,7 @@ namespace Eduhome.Controllers
             }
 
 
-            var roleResult = await _userManager.AddToRoleAsync(appUser, Roles.Member.ToString());
+            var roleResult = await _userManager.AddToRoleAsync(appUser, Roles.SuperAdmin.ToString());
             if (!roleResult.Succeeded)
             {
                 foreach (var item in roleResult.Errors)
@@ -162,6 +164,73 @@ namespace Eduhome.Controllers
                     await _roleManager.CreateAsync(new IdentityRole(item.ToString()));
                 }
             }
+
+        }
+
+        public async Task<IActionResult> EmailConfirmation(AppUser appUser)
+        {
+            string token = await _userManager.GenerateEmailConfirmationTokenAsync(appUser);
+
+            string redirectionLink = Url.Action(nameof(ConfirmEmail), controller: "Account", new
+            {
+                username = appUser.UserName,
+                token
+            }, protocol: HttpContext.Request.Scheme);
+
+            string linkTag = $"<a href=\"{redirectionLink}\"></a>";
+            await SendEmail(linkTag);
+
+            return Json("Confirimation Link is Sent.Please Check Your Email Inbox.");
+        }
+
+
+        public async Task<IActionResult> ConfirmEmail(string userName,string token)
+        {
+            AppUser user = await _userManager.FindByNameAsync(userName);
+     
+            await _userManager.ConfirmEmailAsync(user, token);
+
+            await _signInManager.SignInAsync(user, true);
+
+            return RedirectToAction("Index", "Home");
+
+
+        }
+
+        public async Task<IActionResult> SendEmail(string routeLink)
+        {
+            string from = "arif.babayev.2005@gmail.com";
+            string to = "farid.mammadov@code.edu.az";
+            string subject = "This message send via Subscribe button on Eduhome";
+            string body = routeLink;
+
+            MailMessage message = new(from, to, subject, body);
+
+            message.BodyEncoding = System.Text.Encoding.UTF8;
+            message.IsBodyHtml = true;
+
+            NetworkCredential credential = new(from, "bcxcejzxkazgrpri");
+
+            SmtpClient client = new SmtpClient("smtp.gmail.com", 587);
+
+            client.UseDefaultCredentials = false;
+
+            client.EnableSsl = true;
+
+            client.Credentials = credential;
+
+            client.DeliveryMethod = SmtpDeliveryMethod.Network;
+
+            try
+            {
+                await client.SendMailAsync(message);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+
+            return Json("Done");
 
         }
     }

@@ -52,6 +52,7 @@ namespace Eduhome
                 options.Lockout.DefaultLockoutTimeSpan = System.TimeSpan.FromMinutes(2);
                 options.Password.RequiredLength = 8;
                 options.User.RequireUniqueEmail = true;
+                //options.SignIn.RequireConfirmedEmail = true ;
             });
 
         }
