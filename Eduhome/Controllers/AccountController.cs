@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Business.ViewModels;
 using DAL.Identity;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using static Utilities.Helpers.Enums;
@@ -139,7 +140,7 @@ namespace Eduhome.Controllers
             return RedirectToAction("Index", controllerName: "Home");
         }
 
-
+        [HttpGet(nameof(Logout))]
         public async Task<IActionResult> Logout()
         {
             if (User.Identity.IsAuthenticated)
@@ -150,6 +151,8 @@ namespace Eduhome.Controllers
             return RedirectToAction("Index", controllerName: "Home");
         }
 
+        
+        [Authorize(Roles= "SuperAdmin")]
         public async Task CreateRoles()
         {
             foreach (var item in Enum.GetValues(typeof(Roles)))
