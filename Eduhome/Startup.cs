@@ -55,6 +55,10 @@ namespace Eduhome
                 //options.SignIn.RequireConfirmedEmail = true ;
             });
 
+
+
+            services.AddScoped<SettingRepository>();
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

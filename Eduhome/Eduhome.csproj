@@ -35,6 +35,10 @@
     <None Remove="Areas\Admin\Views\Testimonials\" />
     <None Remove="Microsoft.AspNetCore.Identity.EntityFrameworkCore" />
     <None Remove="Views\Account\" />
+    <None Remove="Views\Shared\Components\" />
+    <None Remove="Views\Shared\Components\Header\" />
+    <None Remove="Views\Shared\Components\Footer\" />
+    <None Remove="Controller\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Controllers\" />
@@ -59,6 +63,10 @@
     <Folder Include="Areas\Admin\Views\Event\" />
     <Folder Include="Areas\Admin\Views\Testimonial\" />
     <Folder Include="Views\Account\" />
+    <Folder Include="Views\Shared\Components\" />
+    <Folder Include="Views\Shared\Components\Header\" />
+    <Folder Include="Views\Shared\Components\Footer\" />
+    <Folder Include="Component\" />
   </ItemGroup>
   <ItemGroup>
     <Content Remove="wwwroot\" />

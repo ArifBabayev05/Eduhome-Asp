@@ -130,3 +130,5 @@ $(".notice-left").niceScroll({
 })(jQuery);
 
 var firstCol = document.getElementsByClassName("firstCol");
+
+

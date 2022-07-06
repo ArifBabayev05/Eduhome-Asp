@@ -21,6 +21,8 @@ namespace DAL.Data
         public DbSet<Position> Positions { get; set; }
         public DbSet<Testimonial> Testimonials{ get; set; }
 
+        public DbSet<Setting> Settings { get; set; }
+
 
     }
 }
