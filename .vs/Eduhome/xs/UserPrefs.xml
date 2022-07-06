@@ -1,38 +1,18 @@
 ﻿<Properties StartupConfiguration="{B2028D3B-B358-482D-AF81-BED6A2AC2B4F}|Default">
-  <MonoDevelop.Ide.ItemProperties.Eduhome PreferredExecutionTarget="/Applications/Google Chrome.app" />
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Eduhome/Controllers/AccountController.cs">
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.ItemProperties.Eduhome PreferredExecutionTarget="/Applications/Google Chrome.app" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Business/Repository/SettingRepository.cs">
     <Files>
-      <File FileName="Business/ViewModels/Account/LoginVM.cs" Line="11" Column="46" />
-      <File FileName="Eduhome/Controllers/AccountController.cs" Line="204" Column="35" />
-      <File FileName="Utilities/Helpers/Enums.cs" Line="15" Column="13" />
-      <File FileName="Eduhome/Areas/Admin/Controllers/DashboardController.cs" Line="12" Column="65" />
-      <File FileName="Eduhome/Areas/Admin/Controllers/SliderController.cs" Line="18" Column="56" />
-      <File FileName="Eduhome/Views/Shared/_Layout.cshtml" Line="95" Column="42" />
-      <File FileName="Eduhome/Areas/Admin/Views/Shared/_AdminLayout.cshtml" Line="149" Column="70" />
-      <File FileName="Eduhome/Controllers/HomeController.cs" Line="37" Column="18" />
-      <File FileName="Eduhome/Views/Account/Register.cshtml" Line="1" Column="1" />
-      <File FileName="Eduhome/Views/Account/Login.cshtml" Line="1" Column="1" />
-      <File FileName="Eduhome/Startup.cs" Line="55" Column="60" />
-      <File FileName="Eduhome/Program.cs" Line="1" Column="1" />
-      <File FileName="Eduhome/Views/_ViewStart.cshtml" Line="1" Column="1" />
-      <File FileName="Eduhome/Views/_ViewImports.cshtml" Line="1" Column="1" />
-      <File FileName="Eduhome/Views/Home/Index.cshtml" Line="1" Column="1" />
-      <File FileName="Eduhome/Areas/Admin/Controllers/TestimonialController.cs" Line="1" Column="1" />
-      <File FileName="Eduhome/Areas/Admin/Controllers/EventController.cs" Line="1" Column="1" />
-      <File FileName="DAL/Identity/AppUser.cs" Line="1" Column="1" />
-      <File FileName="DAL/Data/AppDbContext.cs" Line="1" Column="1" />
-      <File FileName="DAL/Base/BaseEntity.cs" Line="12" Column="1" />
-      <File FileName="Business/ViewModels/Account/RegisterVM.cs" Line="1" Column="1" />
-      <File FileName="Business/Services/ITestimonialService.cs" Line="1" Column="1" />
-      <File FileName="Eduhome/Areas/Admin/Views/Dashboard/Index.cshtml" Line="1" Column="4" />
-      <File FileName="Eduhome/Areas/Admin/Views/_ViewImports.cshtml" Line="1" Column="1" />
-      <File FileName="Business/Repository/SliderRepository.cs" Line="56" Column="20" />
-      <File FileName="DAL/Models/Slider.cs" Line="12" Column="23" />
-      <File FileName="DAL/Entity/IEntity.cs" Line="1" Column="1" />
-      <File FileName="DAL/Models/Blog.cs" Line="9" Column="31" />
-      <File FileName="Business/ViewModels/Home/HomeVM.cs" Line="7" Column="18" />
-      <File FileName="Eduhome/Views/Account/ConfirmEmail.cshtml" Line="1" Column="25" />
+      <File FileName="Business/Repository/SettingRepository.cs" Line="20" Column="39" />
+      <File FileName="Business/Services/ISliderService.cs" Line="1" Column="1" />
+      <File FileName="Eduhome/Startup.cs" Line="59" Column="1" />
+      <File FileName="Eduhome/Areas/Admin/Controllers/BlogController.cs" Line="1" Column="1" />
+      <File FileName="DAL/Data/AppDbContext.cs" Line="17" Column="28" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -40,7 +20,9 @@
           <Node name="Eduhome" expanded="True">
             <Node name="Business" expanded="True">
               <Node name="Base" expanded="True" />
-              <Node name="Repository" expanded="True" />
+              <Node name="Repository" expanded="True">
+                <Node name="SettingRepository.cs" selected="True" />
+              </Node>
               <Node name="Services" expanded="True" />
               <Node name="ViewModels" expanded="True">
                 <Node name="Account" expanded="True" />
@@ -52,6 +34,7 @@
               <Node name="Data" expanded="True" />
               <Node name="Entity" expanded="True" />
               <Node name="Identity" expanded="True" />
+              <Node name="Models" expanded="True" />
             </Node>
             <Node name="Eduhome" expanded="True">
               <Node name="Areas" expanded="True">
@@ -69,6 +52,11 @@
                 <Node name="Home" expanded="True" />
                 <Node name="Shared" expanded="True" />
               </Node>
+              <Node name="wwwroot" expanded="True">
+                <Node name="assets" expanded="True">
+                  <Node name="js" expanded="True" />
+                </Node>
+              </Node>
             </Node>
             <Node name="Exceptions" expanded="True">
               <Node name="Entity" expanded="True" />
@@ -84,9 +72,4 @@
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
-  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MultiItemStartupConfigurations />
-  <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
-  </MonoDevelop.Ide.DebuggingService.Breakpoints>
 </Properties>

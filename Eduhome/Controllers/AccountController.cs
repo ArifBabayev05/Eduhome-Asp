@@ -180,7 +180,7 @@ namespace Eduhome.Controllers
             string linkTag = $"<a href=\"{redirectionLink}\"></a>";
             await SendEmail(linkTag);
 
-            return Json("Confirimation Link is Sent.Please Check Your Email Inbox.");
+            return Json("Confirimation Link was Sent.Please Check Your Email Inbox.");
         }
 
 
@@ -200,7 +200,11 @@ namespace Eduhome.Controllers
         public async Task<IActionResult> SendEmail(string routeLink)
         {
             string from = "arif.babayev.2005@gmail.com";
+
+
             string to = "farid.mammadov@code.edu.az";
+
+            //Fix here
             string subject = "This message send via Subscribe button on Eduhome";
             string body = routeLink;
 
@@ -232,6 +236,13 @@ namespace Eduhome.Controllers
 
             return Json("Done");
 
+        }
+
+
+        public async Task<IActionResult> TakeEmail()
+        {
+            
+            return View();
         }
     }
 }
